@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+
+        <title> Trivia Game! </title>
+
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+        
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    <body>
+		
+			<header>
+				<h1> Trivia Game! </h1>
+			</header>
+		<div class="content">
+
+
+			<button id="startGame"> Press Start! </button>
+
+			<div id="timer"> Time Left: </div> 
+			<!--may want to add text in javascript -->
+
+			<div id="question"> Question #1, #2, etc.. </div>
+			<!--may want to add text in javascript -->
+
+			<button id="answerOne" class="answer"> Option 1 </button>
+			<button id="answerTwo" class="answer"> Option 2 </button>
+			<button id="answerThree" class="answer"> Option 3 </button>
+			<button id="answerFour" class="answer"> Option 4 </button>
+		</div>
+		
+		<!--Hide this section with jquery and display once 
+			all questions have been answered/unanswered -->
+		<div class="result">
+			<span id="totalQuestions"></span>
+			<span id="correct"></span>
+			<span id="incorrect"></span>
+			<span id="unanswered"></span>
+
+		<button class="reset"> Click here to Try Again </button>
+		</div>
+
+
+        <script src="assets/javascript/game.js"></script>
+    </body>
+</html>
