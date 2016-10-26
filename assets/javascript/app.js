@@ -1,6 +1,9 @@
 
 // Once the user pushes start, timer will begin.
 var number = 10
+var correctAnswers = 0;
+var wrongAnswers = 0;
+var unAnswered = 0;
 
 $("#startGame").on("click", runGame);
 
@@ -56,8 +59,14 @@ $("#answerOne").click(function(){
 var answerOne = false;
 	if(!answerOne) {
 			answerOne = true;
-			$(".content").html("Stuff");
-	} 
+			correctAnswers++;
+			$(".content").html("Correct!"); // display correct answer.
+			setTimeout(secondSet, 3000);
+}
+
+$("#answerTwo", "#answerThree", "#answerFour").click(function(){
+	$(".content").html("Wrong Answer!"); // display what the correct answer should be.
+})
 
 		
 });		
