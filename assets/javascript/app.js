@@ -24,7 +24,7 @@ function stop() {
 // questions and answer bank
 var questions = {
 	firstSet: {
-		question : "test123",
+		question : "What is the name of the first Harry Potter Book?",
 		answers : ["firstAnswer", "secondAnswer", "thirdAnswer", "fourthAnswer"],
 		picture : []
 	},
@@ -44,11 +44,52 @@ var questions = {
 		picture : []
 	}
 }
+
+// -----Game Start------
 function runGame() {
+
+	counter = setInterval(decrement, 1000);
+
+	$("#question").html(questions.firstSet.question);
+	$("#answerOne").html(questions.firstSet.answers[0]);
+	$("#answerTwo").html(questions.firstSet.answers[1]);
+	$("#answerThree").html(questions.firstSet.answers[2]);
+	$("#answerFour").html(questions.firstSet.answers[3]);
+
+$("#answerOne").click(function(){
+var answerOne = false;
+	if(!answerOne) {
+			answerOne = true;
+			correctAnswers++;
+			$(".content").html("Correct!"); // displays correct answer.
+			}
+		})
+
+// Testing out these click functions on the buttons ******SHORTEN THESE LATER*****
+$("#answerTwo").click(function(){
+	incorrect++
+	$(".content").html("Wrong Answer!"); // display what the correct answer should be.
+	console.log(questions.firstSet.answers[0]);
+})
+$("#answerThree").click(function(){
+	incorrect++
+	$(".content").html("Wrong Answer!"); // display what the correct answer should be.
+	console.log(questions.firstSet.answers[0]);
+})
+$("#answerFour").click(function(){
+	incorrect++
+	$(".content").html("Wrong Answer!"); // display what the correct answer should be.
+	console.log(questions.firstSet.answers[0]);
+})
+setTimeout(secondSet, 3000);
+}
+// ----- Second Set Begins ----
+// maybe use a for loop?
+function secondSet() {
 	counter = setInterval(decrement, 1000);
 
 
-	// First set of Questions and Answers
+
 		$("#question").html(questions.firstSet.question);
 		$("#answerOne").html(questions.firstSet.answers[0]);
 		$("#answerTwo").html(questions.firstSet.answers[1]);
@@ -61,18 +102,11 @@ var answerOne = false;
 			answerOne = true;
 			correctAnswers++;
 			$(".content").html("Correct!"); // display correct answer.
-			setTimeout(secondSet, 3000);
-}
+			setTimeout(thirdSet, 3000);
+			}
+})		
+}		
 
-$("#answerTwo", "#answerThree", "#answerFour").click(function(){
-	$(".content").html("Wrong Answer!"); // display what the correct answer should be.
-})
-
-		
-});		
-
-
-}
 
 
 
