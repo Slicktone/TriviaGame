@@ -29,7 +29,7 @@ function stop() {
 var questions = {
 	firstSet: {
 		question : "What is the name of the first Harry Potter Book?",
-		answers : ["firstAnswer", "secondAnswer", "thirdAnswer", "fourthAnswer"],
+		answers : ["The Sorcerers Stone", "The Two Towers", "The Flight of the Phoenix", "The Prisoner of Azcaban"],
 		picture : []
 	},
 	secondSet: {
@@ -48,11 +48,27 @@ var questions = {
 		picture : []
 	}
 }
+// I THINK THIS IS THE DIRECTION I WANT TO GO TO LOOPS
+// Use this array of objects to iterate through each question?
+ /* var questionSet = [
+{firstSet: {
+	question : "test123",
+	answers: ["answer1", "answer2", "answer3"],
+	picture : []
+	}
+ secondSet: {
+ 	question : "test123",
+ 	answer: ["answer1", "answer2", "answerThree"],
+ 	picture : []
+ }
+}];
+*/
+
 
 // -----Game Start------
 function runGame() {
 
-for (var i = 0; i < questions.length; i++) {
+// for (var i = 0; i < questions.length; i++) {
 	startTimer();
 
 		$("#question").html(questions.firstSet.question);
@@ -60,15 +76,12 @@ for (var i = 0; i < questions.length; i++) {
 		$("#answerTwo").html(questions.firstSet.answers[1]);
 		$("#answerThree").html(questions.firstSet.answers[2]);
 		$("#answerFour").html(questions.firstSet.answers[3]);
-}
+// }
 
 $("#answerOne").click(function(){
-var answerOne = false;
-	if(!answerOne) {
-			answerOne = true;
 			correctAnswers++;
-			$(".content").html("Correct!"); // displays correct answer.
-			}
+			$(".content").html(""); // displays correct answer.
+			
 		})
 
 // Testing out these click functions on the buttons ******SHORTEN THESE LATER*****

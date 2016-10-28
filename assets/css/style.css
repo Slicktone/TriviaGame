@@ -4,3 +4,9 @@
 .result {
 	display: none;
 }
+.answer {
+	background-color: #ccc;
+	display: inline-block;
+	margin-top: 20px;
+
+}
